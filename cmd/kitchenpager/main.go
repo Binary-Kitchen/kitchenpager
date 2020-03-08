@@ -1,11 +1,12 @@
 package main
 
 import (
-	"kitchenpager/internal/apichecker"
-	"kitchenpager/internal/config"
-	"kitchenpager/pkg/dapnet"
 	"log"
 	"time"
+
+	"github.com/binary-kitchen/kitchenpager/internal/apichecker"
+	"github.com/binary-kitchen/kitchenpager/internal/config"
+	"github.com/binary-kitchen/kitchenpager/pkg/dapnet"
 )
 
 func main() {

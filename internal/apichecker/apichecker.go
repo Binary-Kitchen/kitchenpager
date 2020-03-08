@@ -2,10 +2,11 @@ package apichecker
 
 import (
 	"fmt"
-	"kitchenpager/pkg/dapnet"
-	"kitchenpager/pkg/spaceapi"
 	"log"
 	"time"
+
+	"github.com/binary-kitchen/kitchenpager/pkg/dapnet"
+	"github.com/binary-kitchen/kitchenpager/pkg/spaceapi"
 )
 
 //CheckandPageOpenStatusperiodically gets the current open state and if it changed it will Page all people
