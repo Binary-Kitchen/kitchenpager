@@ -17,5 +17,5 @@ func main() {
 	ticker := time.NewTicker(1 * time.Minute)
 	pager := dapnet.NewPager(c.Username, c.Password)
 	go pager.Start()
-	apichecker.CheckandPageOpenStatusperiodically(ticker, pager, c.SpaceAPI, c.Callsigns)
+	apichecker.CheckandPageOpenStatusperiodically(ticker, pager, c.SpaceAPI, c.Callsigns, c.TransmitterGroupNames)
 }
