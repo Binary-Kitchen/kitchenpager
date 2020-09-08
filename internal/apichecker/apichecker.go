@@ -10,7 +10,7 @@ import (
 )
 
 //CheckandPageOpenStatusperiodically gets the current open state and if it changed it will Page all people
-func CheckandPageOpenStatusperiodically(ticker *time.Ticker, pager *dapnet.Pager, URL string, callsigns []string) {
+func CheckandPageOpenStatusperiodically(ticker *time.Ticker, pager *dapnet.Pager, URL string, callsigns []string, transmitterGroupNames []string) {
 	var laststatus bool
 	for range ticker.C {
 		schema, err := spaceapi.GetSchemafromURL(URL)
@@ -29,7 +29,7 @@ func CheckandPageOpenStatusperiodically(ticker *time.Ticker, pager *dapnet.Pager
 				c := dapnet.Call{
 					Text:                  text,
 					CallSignNames:         callsigns,
-					TransmitterGroupNames: []string{"all"},
+					TransmitterGroupNames: transmitterGroupNames,
 				}
 				pager.AddNewCalltoQueue(c)
 			}

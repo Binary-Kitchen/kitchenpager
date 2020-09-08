@@ -8,10 +8,11 @@ import (
 
 //Config holds the settings to setup the paging service
 type Config struct {
-	Username  string
-	Password  string
-	SpaceAPI  string
-	Callsigns []string
+	Username              string
+	Password              string
+	SpaceAPI              string
+	Callsigns             []string
+	TransmitterGroupNames []string
 }
 
 func LoadConfig(filepath string) (Config, error) {
